@@ -1,25 +1,24 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { DocumentHead, useNavigate } from "@builder.io/qwik-city";
+import { Button } from "~/components/ui/button/button";
 
 export default component$(() => {
+  const nav = useNavigate();
   return (
     <>
-      <h1>Hi 👋</h1>
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </div>
+      <h1>Check in at Burdick</h1>
+      <Button onClick$={() => nav('/pageInput')}>Enter barcode number manually</Button>
+      <Button onClick$={() => nav('/pageScan')}>Scan barcode</Button>
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Scan Fast",
   meta: [
     {
-      name: "description",
-      content: "Qwik site description",
+      name: "Scan Fast",
+      content: "A PWA that allows TU students to check in to the Burdick gym significantly faster that the Burdick app",
     },
   ],
 };
