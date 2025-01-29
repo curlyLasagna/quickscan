@@ -1,0 +1,1 @@
+import{_ as a}from"./q-BtSOQMO8.js";import{b as e,q as i}from"./q-CyySC4Bf.js";const s=e(i(()=>a(()=>import("./q-CyKGI9tq.js").then(t=>t.i),[]),"s_B0lqk5IDDy4")),r={title:"Scan Fast",meta:[{name:"Scan Fast",content:"A PWA that allows TU students to check in to the Burdick gym significantly faster that the existing Burdick app"}]};export{s as default,r as head};
