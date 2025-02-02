@@ -10,7 +10,7 @@ function App() {
         <>
             <div className='h-screen w-50 place-items-center'>
                 <Input_Form barcodeVal={barcodeVal} setBarcodeVal={setBarcode} />
-                <Barcode barcode={barcodeVal} />
+                 {barcodeVal && barcodeVal.length > 0 && <Barcode barcode={barcodeVal} />}
             </div>
         </>
     )
