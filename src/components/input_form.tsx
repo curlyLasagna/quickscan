@@ -48,7 +48,7 @@ export const Input_Form = ({ barcodeVal, setBarcodeVal }: InputFormProps) => {
                 <form>
                     <div>
                         <div className='flex flex-col space-y-1.5'>
-                            <Input type="number" value={tempInputVal} onChange={(e) => setTempInput(e.target.value)} />
+                            <Input type="number" value={tempInputVal} onChange={(e) => setTempInput(e.target.value)} required/>
                             <Dialog>
                                 <DialogTrigger>
                                     Click here if you don't know what to enter
