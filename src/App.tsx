@@ -8,7 +8,7 @@ function App() {
     const [barcodeVal, setBarcode] = useState<string>(() => localStorage.getItem(key) || "");
     return (
         <>
-            <div className='grid h-screen w-50 place-items-center'>
+            <div className='h-screen w-50 place-items-center'>
                 <Input_Form barcodeVal={barcodeVal} setBarcodeVal={setBarcode} />
                 <Barcode barcode={barcodeVal} />
             </div>

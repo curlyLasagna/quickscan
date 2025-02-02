@@ -1,16 +1,16 @@
-import { Popover, PopoverContent, PopoverTrigger } from "@radix-ui/react-popover"
-import { Card, CardContent, CardDescription, CardHeader } from "./ui/card"
-import { Input } from "./ui/input"
-import onecardURL from '../assets/onecard.jpg'
-import { Button } from "./ui/button"
 import { useState } from "react"
+import onecardURL from "../assets/onecard.jpg"
+import { Button } from "./ui/button"
+import { Card, CardContent, CardDescription, CardHeader } from "./ui/card"
+import { Dialog, DialogTitle, DialogTrigger, DialogContent, DialogDescription } from "./ui/dialog"
+import { Input } from "./ui/input"
 
 interface InputFormProps {
     barcodeVal: string;
     setBarcodeVal: (value: string) => void;
 }
 
-export const Input_Form = ({barcodeVal, setBarcodeVal}: InputFormProps) => {
+export const Input_Form = ({ barcodeVal, setBarcodeVal }: InputFormProps) => {
     const [tempInputVal, setTempInput] = useState<string>(barcodeVal)
 
     /**
@@ -26,18 +26,19 @@ export const Input_Form = ({barcodeVal, setBarcodeVal}: InputFormProps) => {
     }
 
     return (
-        <Card className='w-[500px]'>
+        <Card className='w-[300px] md:w-9/12 mt-10'>
             <CardHeader>
                 <CardDescription>
                     <p>
-                        A faster way to get into the Burdick gym without logging in.
+                        A faster way to get into the Burdick gym without logging in...
+
                     </p>
+                        <b>Over and over again</b>.
                     <p>
-                        All this website does is generate a barcode based on your input and stores it locally in your device via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.
-
+                        Generate a barcode based on your input and store it locally on your device via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.
                     </p>
 
-                    <p>It's <a href="">open source</a> if you'd like to contribute or don't trust me.
+                    <p>It's <a href="">open source</a> if you'd like to contribute.
                     </p>
 
                     <p></p>
@@ -48,15 +49,17 @@ export const Input_Form = ({barcodeVal, setBarcodeVal}: InputFormProps) => {
                     <div>
                         <div className='flex flex-col space-y-1.5'>
                             <Input type="number" value={tempInputVal} onChange={(e) => setTempInput(e.target.value)} />
-                            <Popover>
-                                <PopoverTrigger>
+                            <Dialog>
+                                <DialogTrigger>
                                     Click here if you don't know what to enter
-                                    <PopoverContent className='w-[400px] p-10'>
-                                        <img className="w-full h-full object-contain" src={onecardURL} alt="" />
-                                    </PopoverContent>
-                                </PopoverTrigger>
-                            </Popover>
-                            <Button onClick={checkStorage}>Generate Code</Button>
+                                </DialogTrigger>
+                                <DialogContent className="w-[300px] bg-white">
+                                    <DialogTitle>Barcode number</DialogTitle>
+                                    <img className="w-full h-full object-contain" src={onecardURL} alt="" />
+                                    <DialogDescription>Enter the number above the barcode in your TU OneCard</DialogDescription>
+                                </DialogContent>
+                            </Dialog>
+                            <Button variant="outline" onClick={checkStorage}>Generate Code</Button>
                         </div>
                     </div>
                 </form>
