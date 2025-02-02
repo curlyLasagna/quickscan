@@ -38,7 +38,7 @@ export const Input_Form = ({ barcodeVal, setBarcodeVal }: InputFormProps) => {
                         Generate a barcode based on your input and store it locally on your device via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.
                     </p>
 
-                    <p>It's <a href="">open source</a> if you'd like to contribute.
+                    <p>It's <a href="https://github.com/curlyLasagna/scanfast">open source</a> if you'd like to contribute.
                     </p>
 
                     <p></p>
