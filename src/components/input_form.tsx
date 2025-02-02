@@ -26,16 +26,16 @@ export const Input_Form = ({ barcodeVal, setBarcodeVal }: InputFormProps) => {
     }
 
     return (
-        <Card className='w-[300px] md:w-9/12 mt-10'>
+        <Card className='w-[350px] sm:w-[450px] md:w-[800px]'>
             <CardHeader>
-                <CardDescription>
+                <CardDescription className="text-md">
                     <p>
                         A faster way to get into the Burdick gym without logging in...
 
                     </p>
                         <b>Over and over again</b>.
                     <p>
-                        Generate a barcode based on your input and store it locally on your device via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.
+                        Generate a barcode based on the number above the barcode on your TU OneCard and store it locally on your device via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.
                     </p>
 
                     <p>It's <a href="https://github.com/curlyLasagna/scanfast">open source</a> if you'd like to contribute.
@@ -53,7 +53,7 @@ export const Input_Form = ({ barcodeVal, setBarcodeVal }: InputFormProps) => {
                                 <DialogTrigger>
                                     Click here if you don't know what to enter
                                 </DialogTrigger>
-                                <DialogContent className="w-[300px] bg-white">
+                                <DialogContent className="w-[350px] sm:w-[450px] bg-white">
                                     <DialogTitle>Barcode number</DialogTitle>
                                     <img className="w-full h-full object-contain" src={onecardURL} alt="" />
                                     <DialogDescription>Enter the number above the barcode in your TU OneCard</DialogDescription>
