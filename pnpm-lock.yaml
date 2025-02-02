@@ -38,6 +38,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-jsbarcode:
+        specifier: ^1.0.1
+        version: 1.0.1(react@18.3.1)
       tailwind-merge:
         specifier: ^3.0.1
         version: 3.0.1
@@ -1587,6 +1590,11 @@ packages:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
       react: ^18.3.1
+
+  react-jsbarcode@1.0.1:
+    resolution: {integrity: sha512-M6Z8M2y3/re4dE8FUhWUO/DWk4Mmo4CfOu34JnncYR0NHS8Q9kJQwzHCyEXJ8HnK2EwR5NWayG7n7bWhHXB2tA==}
+    peerDependencies:
+      react: '>=17 <=18'
 
   react-refresh@0.14.2:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
@@ -3236,6 +3244,11 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+
+  react-jsbarcode@1.0.1(react@18.3.1):
+    dependencies:
+      jsbarcode: 3.11.6
+      react: 18.3.1
 
   react-refresh@0.14.2: {}
 

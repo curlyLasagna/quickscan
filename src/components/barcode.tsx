@@ -1,10 +1,8 @@
-import JsBarcode from "jsbarcode"
-
+import { ReactBarcode } from 'react-jsbarcode';
 export const Barcode = ({ barcode }: { barcode: string }) => {
-    JsBarcode("#svg--barcode", barcode)
-  return (
+    return (
         <div>
-            <svg id="svg--barcode"></svg>
+            <ReactBarcode value={barcode}></ReactBarcode>
         </div>
     )
 }
