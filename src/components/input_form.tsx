@@ -1,5 +1,5 @@
 import { useState } from "react"
-import onecardURL from "../assets/onecard.jpg"
+import onecardURL from "/onecard.jpg"
 import { Button } from "./ui/button"
 import { Card, CardContent, CardDescription, CardHeader } from "./ui/card"
 import { Dialog, DialogTitle, DialogTrigger, DialogContent, DialogDescription } from "./ui/dialog"
